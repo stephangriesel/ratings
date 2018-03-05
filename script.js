@@ -2,10 +2,10 @@
 
 const ratings = {
     asics: 5.0,
-    nike: 0.5,
-    adidas: 0.2,
-    newbalance: 0.5,
-    brooks:0.1
+    nike: 2.5,
+    adidas: 2.2,
+    newbalance: 3.5,
+    brooks:1.1
 }
 
 // Total stars
@@ -23,5 +23,8 @@ function getRatings() {
         // Round to nearest 10
         const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
         console.log(starPercentageRounded);
+
+        // Set width of stars inner to %
+        document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
     }
 }
